@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- 12.22.7
+cache: npm
+install:
+- npm install
+script:
+- npm run test:unit
+- npm run build
+deploy:
+  provider: heroku
+  api_key: ae8f1f36-5f33-4a0a-a779-b5ad6afb4436
+  app: travis-ci-project
